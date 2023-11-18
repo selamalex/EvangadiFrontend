@@ -20,7 +20,7 @@ function RegisterAndLogin() {
 			username: userName,
 			password: password,
 		};
-		fetch("http://localhost:5500/api/users/register", {
+		fetch(`${process.env.REACT_APP_base_url}/api/users/register`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -48,7 +48,7 @@ function RegisterAndLogin() {
 			email: loginEmail,
 			password: loginPassword,
 		};
-		fetch("http://localhost:5500/api/users/login", {
+		fetch(`${process.env.REACT_APP_base_url}/api/users/login`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
